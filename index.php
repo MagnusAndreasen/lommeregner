@@ -9,19 +9,21 @@
 	<h1>King of calculators</h1>
 	
 	<form action="<?=$_SERVER["PHP_SELF"]?>" method="get">
-		<input type="text" name="val1"/>
+		<input type="number" name="val1" required/>
 		<br><br>
 		<button type="submit" name="operator" value="add">+</button>
 		<button type="submit" name="operator" value="sub">-</button>
-		<button type="submit" name="operator" value="mul">*</button>
+		<button type="submit" name="operator" value="mul">x</button>
 		<button type="submit" name="operator" value="div">/</button>
 		<br><br>
-		<input type="text" name="val2"/>
+		<input type="number" name="val2" required />
 	</form>
 	
 	<?php 
-		$v1 = $_GET["val1"];
-		$v2 = $_GET["val2"];
+		// $v1 = $_GET["val1"];
+		// $v2 = $_GET["val2"];
+		$v1 = filter_input(INPUT_GET, "val1", FILTER_VALIDATE_INT) or die("missing or illegal val1 parameter");
+		$v2 = filter_input(INPUT_GET, "val2", FILTER_VALIDATE_INT) or die("missing or illegal val2 parameter");  
 		$op = $_GET["operator"];
 		  
 		switch($op){
