@@ -5,7 +5,6 @@
 <title>Lommeregner</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-
 <body>
 <div class="calculator">
 	<h1>King of Calculators</h1>
@@ -24,8 +23,6 @@
 	<?php 
 		$op = $_GET["operator"];
 		if (!empty($op) ){
-		// $v1 = $_GET["val1"];
-		// $v2 = $_GET["val2"];
 		$v1 = filter_input(INPUT_GET, "val1", FILTER_VALIDATE_INT);
 		if ($v1 === false) {die("missing or illegal val1 parameter");}
 		$v2 = filter_input(INPUT_GET, "val2", FILTER_VALIDATE_INT);
@@ -55,14 +52,12 @@
 			default: 
 				$res = "Unknown operator".$op."";
 		}
-		
 		}
 	?>
 	<form>
   		<output class="output"><?php echo $v1." ".$opchar." ".$v2." = ".$res; ?></output>
 	</form>
-	<!--<div class="output"><?php echo $v1." ".$opchar." ".$v2." = ".$res; ?></div> -->
-	<br><br>
+	<br>
 	<form action="<?=$_SERVER["PHP_SELF"]?>" method="get">
 		<button type="submit">Clear</button>
 	</form>
