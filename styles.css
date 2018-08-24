@@ -5,6 +5,7 @@
 	padding-left: 40%;
 	padding-right: 40%;
 	padding-top: 100px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 }
 
 h1 {
@@ -32,10 +33,12 @@ body {
 .input1 {
 	width: 212px;
 	height: 30px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 }
 .input2 {
 	width: 212px;
 	height: 30px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 }
 
 .output {	
@@ -44,4 +47,5 @@ body {
 	height: 30px;
 	display: block;
 	text-align: center;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
 }
